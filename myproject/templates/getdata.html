@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}form{% endblock %}
+<!--html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head-->
+{% block content %}
+    <fieldset>
+        <br><br><br>
+            <h1>Enter the details required to split your expenses</h1>
+        <form action={{ url_for('display_data') }} method="post"  >
+            <div>
+                {{ form.number_of_members.label}}
+                {{ form.number_of_members }}
+            </div>
+            <div>
+                {{ form.friends_list.label }}
+                {{ form.friends_list}}
+            </div>
+            <div>
+                {{ form.money_paid.label }}
+                {{ form.money_paid }}
+            </div>
+            <div>
+                <button>
+                {{ form.submit }}
+            </button>
+            </div>
+        </form>
+        <a href="{{url_for('getdata')}}"><h2>Fill it again</h2></a>
+    </fieldset>
+{% endblock %}
+</html>

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}form{% endblock %}
+<!--html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head-->
+{% block content %}
+    <fieldset>
+        <br><br><br>
+            <h1>Enter the details required to split your expenses</h1>
+        
+        <form action={{ url_for('display_perc') }} method="post"  >
+            <div>
+                {{ form.number_of_members.label}}
+                {{ form.number_of_members }}
+            </div>
+            <div>
+                {{ form.friends_list.label }}
+                {{ form.friends_list}}
+            </div>
+            <div>
+                {{ form.money_paid.label }}
+                {{ form.money_paid }}
+            </div>
+            <div>
+                {{ form.percentage_each.label }}
+                {{ form.percentage_each }}
+            </div>
+            <div>
+                <button>
+                {{ form.submit }}
+            </button>
+            </div>
+        </form>
+    </fieldset>
+{% endblock %}
+</html>

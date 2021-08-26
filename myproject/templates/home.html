@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+   {% if current_user.is_authenticated %}
+   <br><br>
+   <a href="http://localhost:5000/">
+   <img class="one" src={{ url_for('static', filename='logo.JPG') }} align="top right" >
+   </a>
+   <br><br>
+   <p>Hi {{current_user.username}} use this site to split the bills between your friends</p>
+   </img>
+   {% else %}
+	<br><br>
+   <h1 class="one">WELCOME TO SPLITWISE!</h1>
+   <br>
+   <a href="http://localhost:5000/">
+   <img class="one" src={{ url_for('static', filename='logo.JPG') }} align="top right" >
+   </a>
+   <br>
+   <br>
+   <p>Bill splitting a hassle? Leave the math to us!</p>
+   <p>Please login or register</p>
+</img>
+   {% endif %}
+
+
+{% endblock %}
+<!DOCTYPE html>

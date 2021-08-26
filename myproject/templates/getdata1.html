@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}form{% endblock %}
+<!--html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head-->
+{% block content %}
+    <fieldset>
+        <br><br><br><br>
+       
+            <h1>How do you want to split the expenses ?</h1>
+        <br><br> 
+        
+        <ol>
+            
+                
+                <a class="one"href={{ url_for('getdataperc') }}> Divide by percentage</a>
+                
+            </ol>
+            <br>
+            <ol>
+                
+                <a class="one" href={{ url_for('getdata') }}>Divide equally</a>
+               
+            
+        </ol>
+        </fieldset>
+{% endblock %}
+</html>
